@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextCustom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">#bfdbf7</item>
+        <item name="android:textColor">#bfdbf7</item>
+        <item name="android:paddingVertical">20dp</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:backgroundTint">#0f8b8d</item>
+    </style>
+
+    <style name="ButtonCustom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+    </style>
+</resources>

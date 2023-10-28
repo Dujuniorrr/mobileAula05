@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/space__dark__clouds__galaxy__abstract__720x1280_wallpaper"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="178dp"
+        android:layout_height="111dp"
+        android:layout_below="@id/Base"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/space_removebg_preview"
+        tools:ignore="NotSibling" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextEmail"
+        android:inputType="textEmailAddress"
+        style="@style/EditTextCustom"
+        android:layout_below="@id/Logo"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="20dp"
+        android:hint="Email" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextPassword"
+        style="@style/EditTextCustom"
+        android:layout_below="@id/EditTextEmail"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="20dp"
+        android:hint="Senha" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonSignIn"
+        android:text="Entrar"
+        android:layout_marginTop="80dp"
+        android:background="#3C3D79"
+        style="@style/ButtonCustom"
+        android:layout_below="@id/EditTextPassword"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonSignUp"
+        android:text="Cadastrar-se"
+        android:layout_below="@id/ButtonSignIn"
+        android:layout_marginTop="30dp"
+        android:background="#0F658C"
+        style="@style/ButtonCustom" />
+
+
+</RelativeLayout>

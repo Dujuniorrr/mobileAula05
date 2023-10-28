@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/space_wallpaper_dump"
+    tools:context=".activity.RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="178dp"
+        android:layout_height="111dp"
+        android:layout_below="@id/Base"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/space_removebg_preview"
+        tools:ignore="NotSibling" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextName"
+        style="@style/EditTextCustom"
+        android:layout_below="@id/Logo"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="20dp"
+        android:hint="Name"
+        android:inputType="text" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextPhone"
+        style="@style/EditTextCustom"
+        android:inputType="phone"
+        android:layout_below="@id/EditTextName"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/baseline_local_phone_24"
+        android:drawablePadding="20dp"
+        android:hint="Telefone" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextEmail"
+        style="@style/EditTextCustom"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/EditTextPhone"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="20dp"
+        android:hint="Email" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextPassword"
+        style="@style/EditTextCustom"
+        android:layout_below="@id/EditTextEmail"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="20dp"
+        android:hint="Senha" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EditTextPasswordConfirm"
+        style="@style/EditTextCustom"
+        android:layout_below="@id/EditTextPassword"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="20dp"
+        android:hint="Confirme a senha" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonSignUp"
+        style="@style/ButtonCustom"
+        android:layout_below="@id/EditTextPasswordConfirm"
+        android:layout_marginTop="60dp"
+        android:background="#0F658C"
+        android:text="Cadastrar-se" />
+
+</RelativeLayout>
