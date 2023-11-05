@@ -16,6 +16,7 @@ public class User {
         this.email = email;
     }
 
+    private String id;
     private  String tableName = "user";
     private String name;
     private String password;
@@ -62,6 +63,12 @@ public class User {
         this.phone = phone;
     }
 
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
 }

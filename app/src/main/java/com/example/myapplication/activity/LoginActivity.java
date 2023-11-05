@@ -3,7 +3,9 @@ package com.example.myapplication.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,7 +38,14 @@ public class LoginActivity extends AppCompatActivity {
 
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(new UserDAO(LoginActivity.this, new User(editTextEmail.getText().toString(), editTextPassword.getText().toString())).verifyLogin()){
+                UserDAO userDao = new UserDAO(LoginActivity.this, new User(editTextEmail.getText().toString(), editTextPassword.getText().toString()));
+                if(userDao.verifyLogin()){
+                    SharedPreferences sp = getSharedPreferences("appLogin",
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("id", userDao.getUser().getId());
+                    editor.apply();
+
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }
                 else{

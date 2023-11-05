@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/space_wallpaper_dump"
-    tools:context=".activity.RegisterActivity">
+    android:background="@drawable/peakpx"
+    android:id="@+id/base"
+    tools:context=".activity.UpdateActivity">
 
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="178dp"
-        android:layout_height="111dp"
-        android:layout_below="@id/Base"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/space_removebg_preview"
-        tools:ignore="NotSibling" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#0F658C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Atualizar Perfil"
+        app:titleTextColor="@color/white"
+        />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/EditTextName"
         style="@style/EditTextCustom"
-        android:layout_below="@id/Logo"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="150dp"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="20dp"
         android:hint="Nome"
-        android:inputType="text" />
+        android:inputType="text"
+        tools:ignore="NotSibling" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/EditTextPhone"
@@ -48,30 +51,15 @@
         android:drawablePadding="20dp"
         android:hint="Email" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/EditTextPassword"
-        style="@style/EditTextCustom"
-        android:layout_below="@id/EditTextEmail"
-        android:layout_marginTop="30dp"
-        android:drawableLeft="@drawable/baseline_key_24"
-        android:drawablePadding="20dp"
-        android:hint="Senha" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/EditTextPasswordConfirm"
-        style="@style/EditTextCustom"
-        android:layout_below="@id/EditTextPassword"
-        android:layout_marginTop="30dp"
-        android:drawableLeft="@drawable/baseline_key_24"
-        android:drawablePadding="20dp"
-        android:hint="Confirme a senha" />
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ButtonSignUp"
+        android:id="@+id/ButtonUpdate"
         style="@style/ButtonCustom"
-        android:layout_below="@id/EditTextPasswordConfirm"
-        android:layout_marginTop="60dp"
+        android:layout_below="@id/EditTextEmail"
+        android:layout_marginTop="100dp"
         android:background="#0F658C"
-        android:text="Cadastrar-se" />
+        android:text="Atualizar" />
+
+
+
 
 </RelativeLayout>
